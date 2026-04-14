@@ -1,0 +1,10 @@
+System Requirements. 
+1. System shall be able to monitor system health parameters. 
+2. ML algorithm must be supported to run on application layer. (Target Arch: ARM Cortex A)
+3. System shall be able to detect/predict the upcomming faults using ML algorithms. 
+   Preferrablly simple algorithms so that system is not overloaded and ML does not hinder the main applicaiton. 
+4. Based on the predicted fault and the severity of it, system shall be able to mitigate the fault before it occurs. 
+5. Strategies to detect the fault shall be implemented into the ML module 
+6. Stratageis to mitigate the predicted fault must be implemented in a seperate SW module with interfaces to HW abstraction layer. 
+7. There shall be a sperate SW module that can be able to monitor all system health parameters and feed them to ML module in real time. 
+8. The ML modules will be pre-trained. 
