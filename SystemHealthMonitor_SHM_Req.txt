@@ -1,0 +1,30 @@
+// System Health Monitor: 
+
+Requirements for system health monitor: 
+
+Assumptions: 
+1. There are 3 cores for ARM A-76 arch. 2 are running linux and one is running RTOS assuming freeRTOS for the simple system.
+2. The ML layer is controled by either of the cores running linux - 
+3. System health monitor system will gather the data realted to real time system and will share to another core.
+
+Requiremetns for SHM: 
+
+Paramters to be monitored: 
+1. Thread health: tasks deadline missed, tasks speinding time in the wait or suspended state or setting on state of blocked state.
+2. Scheduling and timing: Scheduling latencies - time taken to ISR to RTOS task resume, CPU load: use a hihg resolution idel time measurement 
+    idle < expected_idle --> overload 
+3. Memory health: Heap Free size monitor - sudden drop possiblly indicates risk.
+    Allocation rates - Free rates - spikes can mean the task is mis behaving.
+    Static memory pools utilizations: 
+4. inter task communication and synchronisation: Queue message buffer depth - high watermark near capacity can be a risk indication.
+
+#  (Mutex / semaphore hold times	Long hold times might cause priority inversion.
+#   Mutex timeout / acquisition failures	Indicate contention or deadlocks.
+#   Semaphore pending queue lengths	Many waiters = resource starvation.)
+
+
+Ways to collect this data and share to the userspace of linux running core: 
+1. inside the RTOS: lightweight hooks (Predefined by the rtos) tracepionts idle hooks stack watermarking heap walk, time stamping with a free running arm gemeric timers
+2. Data shall be exported by using a shared memory or an inter core mechanism on linux a userspace darmon can consume the data and raise alerts.
+3. Trace tools: 
+4. idle hook : every 100ms Periodically:  calculate load = 1 – (idle_ticks / total_ticks).
