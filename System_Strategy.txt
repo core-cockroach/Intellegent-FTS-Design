@@ -1,0 +1,32 @@
+# For Creating the system health monitor following is the strategy on system level -
+
+1. Changing memory structure: 
+	Creating a seperate memory reserved section for RTOS.
+		Device Tree overlay - usage
+2. Building the RTOS Image: 
+	RTOS needs to contain hooks for gathering required data and this must write the data on shared memory with peirodicity of 10ms.
+	Tool used for RTOS - FREE RTOS
+
+3. Isolating one core from LINUX: 
+	One core needs to be seperated from LINUX on the runtime - where RTOS will be flashed. 
+
+4. Loading the created RTOS binary into reserved memory.
+
+5. Stating the RTOS core using PSCI from kernel module. 
+	The BCM2712 firmware supports PSCI v1.1 - CPU_ON can directly be called. 
+
+6: Inter-Core Communication - Important !!
+	Shared memory - Partition needs to be reserved from both LINUX(using ioremap) and RTOS (using the physical address) 
+	Interrupts can also be used - GIC600- Routing software generated interrupts between cores. 
+		- Linux will send an SGI with GIC_IPI_SEND_MASK - 
+		- Can be implemented a custom driver
+
+	**For the Inter-Core Communication - for initial implementation - shared memory will be used.**
+
+TOOLS Used: 
+
+1. Creating LINUX build: Buildroot - Kernel wilth config arm psci fw - device tree overlays devmem support needs to be configured.
+2. RTOS Build - ARM toolchanin - ++ some baremetel libs will be included.
+3. RTOS Kernel: FreeRTOS - Already supports ARM A76 - No need to seperate porting.
+3. Debugging - JTAG - J link.
+
