@@ -1,0 +1,16 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+	compatible = "brcm,bcm2712"; /*for RP 5*/
+
+	fragment@0 {
+		target-path = "/reserved-memory";
+		__overlay__ {
+				rtos_memory: rtos@f0000000 {
+					reg = <0x0 0xf0000000 0x2000000>; /*16 MB at 0xf00_000 */
+					no-map;
+				};
+			};	
+	};
+};
