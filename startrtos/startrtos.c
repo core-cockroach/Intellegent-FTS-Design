@@ -37,6 +37,7 @@ static int __init startrtos_init(void)
     }
     fw = rpi_firmware_get(fw_np);
     of_node_put(fw_np);
+    printk("firmware get successfull %d\n", ret);
     if (!fw) {
         pr_err("startrtos: firmware not probed\n");
         return -ENODEV;
@@ -50,6 +51,7 @@ static int __init startrtos_init(void)
     pr_info("startrtos: setting boot addr for CPU%d to 0x%llx\n", target_cpu, entry_point);
     ret = rpi_firmware_property(fw, RPI_FIRMWARE_SET_BOOT_ADDR64,
                                 packet, sizeof(packet));
+    printk("reached line 53 %d\n", ret);
     if (ret) {
         pr_err("startrtos: SET_BOOT_ADDR64 failed: %d\n", ret);
         return ret;
