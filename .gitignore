@@ -1,0 +1,28 @@
+# Compiled objects
+*.o
+
+# Final executable (exact name)
+fault_predictor
+
+# Any other executables (common names, wildcard)
+*.out
+*.exe
+*.app
+
+# Debug / profiling files
+*.gch
+*.pch
+*.ilk
+*.pdb
+
+# Editor backups
+*~
+*.swp
+*.swo
+*.bak
+
+# Build directories (if you use one)
+/build
+
+# Python scripts
+*.py
