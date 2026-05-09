@@ -1,0 +1,1 @@
+savedcmd_/home/cockroach/Intellegent-FTS-Design/LoadRtos/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/cockroach/Intellegent-FTS-Design/LoadRtos/Module.symvers -n -T /home/cockroach/Intellegent-FTS-Design/LoadRtos/modules.order -i Module.symvers -e 

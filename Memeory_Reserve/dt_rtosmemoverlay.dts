@@ -2,15 +2,15 @@
 /plugin/;
 
 / {
-	compatible = "brcm,bcm2712"; /*for RP 5*/
+    compatible = "brcm,bcm2712";
 
-	fragment@0 {
-		target-path = "/reserved-memory";
-		__overlay__ {
-				rtos_memory: rtos@f0000000 {
-					reg = <0x0 0xf0000000 0x2000000>; /*16 MB at 0xf00_000 */
-					no-map;
-				};
-			};	
-	};
+    fragment@0 {
+        target-path = "/reserved-memory";
+        __overlay__ {
+            rtos_memory: rtos@f0000000 {
+                reg = <0x0 0xf0000000 0x0C800000>;  /* 200 MB at 0xF0000000 */
+                no-map;
+            };
+        };
+    };
 };

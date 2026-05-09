@@ -1,0 +1,1 @@
+savedcmd_/home/cockroach/Intellegent-FTS-Design/LoadRtos/image_loader.mod := printf '%s\n'   image_loader.o | awk '!x[$$0]++ { print("/home/cockroach/Intellegent-FTS-Design/LoadRtos/"$$0) }' > /home/cockroach/Intellegent-FTS-Design/LoadRtos/image_loader.mod

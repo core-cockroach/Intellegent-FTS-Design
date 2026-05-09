@@ -1,0 +1,1 @@
+savedcmd_startrtos.ko := ld -r -EL  -maarch64elf -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T /usr/src/linux-headers-6.17.0-1003-raspi/scripts/module.lds -o startrtos.ko startrtos.o startrtos.mod.o .module-common.o
