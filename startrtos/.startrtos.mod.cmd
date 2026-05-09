@@ -1,1 +1,1 @@
-savedcmd_startrtos.mod := printf '%s\n'   startrtos.o | awk '!x[$$0]++ { print("./"$$0) }' > startrtos.mod
+savedcmd_/home/cockroach/Intellegent-FTS-Design/startrtos/startrtos.mod := printf '%s\n'   startrtos.o | awk '!x[$$0]++ { print("/home/cockroach/Intellegent-FTS-Design/startrtos/"$$0) }' > /home/cockroach/Intellegent-FTS-Design/startrtos/startrtos.mod

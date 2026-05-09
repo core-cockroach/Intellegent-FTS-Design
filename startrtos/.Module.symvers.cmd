@@ -1,1 +1,1 @@
-savedcmd_Module.symvers :=  /usr/src/linux-headers-6.17.0-1003-raspi/scripts/mod/modpost -M -m -b -x -a      -o Module.symvers -T modules.order -i /usr/src/linux-headers-6.17.0-1003-raspi/Module.symvers -e 
+savedcmd_/home/cockroach/Intellegent-FTS-Design/startrtos/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/cockroach/Intellegent-FTS-Design/startrtos/Module.symvers -n -T /home/cockroach/Intellegent-FTS-Design/startrtos/modules.order -i Module.symvers -e 

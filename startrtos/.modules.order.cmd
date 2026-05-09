@@ -1,1 +1,1 @@
-savedcmd_modules.order := {   echo startrtos.o; :; } > modules.order
+savedcmd_/home/cockroach/Intellegent-FTS-Design/startrtos/modules.order := {   echo /home/cockroach/Intellegent-FTS-Design/startrtos/startrtos.o; :; } > /home/cockroach/Intellegent-FTS-Design/startrtos/modules.order
