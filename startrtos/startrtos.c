@@ -72,5 +72,5 @@ static void __exit startrtos_exit(void)
 module_init(startrtos_init);
 module_exit(startrtos_exit);
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Your Name");
+MODULE_AUTHOR("cockroach");
 MODULE_DESCRIPTION("RTOS boot for RPi5 – final");
