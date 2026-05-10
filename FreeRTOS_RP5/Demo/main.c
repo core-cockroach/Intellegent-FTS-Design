@@ -67,9 +67,16 @@
 
 #include <FreeRTOS.h>
 #include <task.h>
+#include "queue.h"
 
 #include "Drivers/irq.h"
 #include "Drivers/gpio.h"
+
+#include "./include/fault_manager.h"
+
+extern xTaskHandle xControlTask;
+xTaskHandle xLoggerTaskForMain;
+extern xQueueHandle xControlQueue;
 
 void task1(void *pParam) {
 
@@ -92,6 +99,39 @@ void task2(void *pParam) {
 	}
 }
 
+void control_task(void *pParam) {
+
+	int i = 0;
+	while(1) {
+		i++;
+		vTaskDelay(100);
+		SetGpio(16, 0);
+		vTaskDelay(100);
+	}
+}
+
+void logger_task_func(void *pParam) {
+
+	int i = 0;
+	while(1) {
+		i++;
+		vTaskDelay(100);
+		SetGpio(16, 0);
+		vTaskDelay(100);
+	}
+}
+
+void vFaultMonitor(void *pvParameters) {
+    FaultPrediction pred;
+    for (;;) {
+        // Get telemetry and compute risk – example:
+        pred.fault_code = FAULT_BUS_SATURATION;
+        pred.risk_score = 60.0;   // medium
+        apply_mitigation(&pred);
+        vTaskDelay( (1000 * configTICK_RATE_HZ) / 1000 );//vTaskDelay(pdMS_TO_TICKS(1000));
+    }
+}
+
 
 /**
  *	This is the systems main entry, some call it a boot thread.
@@ -106,8 +146,22 @@ void main (void)
 	xTaskCreate(task1, "LED_0", 128, NULL, 0, NULL);
 	xTaskCreate(task2, "LED_1", 128, NULL, 0, NULL);
 
-	vTaskStartScheduler();
 
+    // Create tasks
+    xTaskCreate(control_task, (const signed char *)"Control", 2048, NULL, 3, &xControlTask);
+    xTaskCreate(logger_task_func, (const signed char *)"Logger", 1024, NULL, 2, &xLoggerTaskForMain);
+    
+    xControlQueue = xQueueCreate(5, sizeof(uint32_t));
+    
+    // Initialise fault manager with logger handle
+    fault_manager_init(xLoggerTaskForMain);
+    
+    // Create fault monitor task
+    xTaskCreate(vFaultMonitor, (const signed char *)"FaultMon", 1024, NULL, 2, NULL);
+    
+
+
+    vTaskStartScheduler();
 	/*
 	 *	We should never get here, but just in case something goes wrong,
 	 *	we'll place the CPU into a safe loop.
@@ -116,3 +170,5 @@ void main (void)
 		;
 	}
 }
+
+

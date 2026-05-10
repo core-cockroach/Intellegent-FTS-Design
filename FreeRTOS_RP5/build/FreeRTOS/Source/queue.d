@@ -1,5 +1,5 @@
-/home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/build/FreeRTOS/Source/queue.o: \
- /home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/FreeRTOS/Source/queue.c \
+/home/cockroach/FreeRTOS_RP5/build/FreeRTOS/Source/queue.o: \
+ /home/cockroach/FreeRTOS_RP5/FreeRTOS/Source/queue.c \
  /usr/include/newlib/stdlib.h /usr/include/newlib/machine/ieeefp.h \
  /usr/include/newlib/_ansi.h /usr/include/newlib/newlib.h \
  /usr/include/newlib/_newlib_version.h /usr/include/newlib/sys/config.h \
@@ -13,14 +13,14 @@
  /usr/include/newlib/alloca.h /usr/include/newlib/string.h \
  /usr/include/newlib/sys/_locale.h /usr/include/newlib/strings.h \
  /usr/include/newlib/sys/string.h \
- /home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/FreeRTOS/Source/include/FreeRTOS.h \
- /home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/FreeRTOS/Source/include/projdefs.h \
- /home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/FreeRTOS/Source/include/FreeRTOSConfig.h \
- /home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/FreeRTOS/Source/include/portable.h \
- /home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/FreeRTOS/Source/portable/GCC/RaspberryPi/portmacro.h \
- /home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/FreeRTOS/Source/include/mpu_wrappers.h \
- /home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/FreeRTOS/Source/include/task.h \
- /home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/FreeRTOS/Source/include/list.h
+ /home/cockroach/FreeRTOS_RP5/FreeRTOS/Source/include/FreeRTOS.h \
+ /home/cockroach/FreeRTOS_RP5/FreeRTOS/Source/include/projdefs.h \
+ /home/cockroach/FreeRTOS_RP5/FreeRTOS/Source/include/FreeRTOSConfig.h \
+ /home/cockroach/FreeRTOS_RP5/FreeRTOS/Source/include/portable.h \
+ /home/cockroach/FreeRTOS_RP5/FreeRTOS/Source/portable/GCC/RaspberryPi/portmacro.h \
+ /home/cockroach/FreeRTOS_RP5/FreeRTOS/Source/include/mpu_wrappers.h \
+ /home/cockroach/FreeRTOS_RP5/FreeRTOS/Source/include/task.h \
+ /home/cockroach/FreeRTOS_RP5/FreeRTOS/Source/include/list.h
 /usr/include/newlib/stdlib.h:
 /usr/include/newlib/machine/ieeefp.h:
 /usr/include/newlib/_ansi.h:
@@ -42,11 +42,11 @@
 /usr/include/newlib/sys/_locale.h:
 /usr/include/newlib/strings.h:
 /usr/include/newlib/sys/string.h:
-/home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/FreeRTOS/Source/include/FreeRTOS.h:
-/home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/FreeRTOS/Source/include/projdefs.h:
-/home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/FreeRTOS/Source/include/FreeRTOSConfig.h:
-/home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/FreeRTOS/Source/include/portable.h:
-/home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/FreeRTOS/Source/portable/GCC/RaspberryPi/portmacro.h:
-/home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/FreeRTOS/Source/include/mpu_wrappers.h:
-/home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/FreeRTOS/Source/include/task.h:
-/home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/FreeRTOS/Source/include/list.h:
+/home/cockroach/FreeRTOS_RP5/FreeRTOS/Source/include/FreeRTOS.h:
+/home/cockroach/FreeRTOS_RP5/FreeRTOS/Source/include/projdefs.h:
+/home/cockroach/FreeRTOS_RP5/FreeRTOS/Source/include/FreeRTOSConfig.h:
+/home/cockroach/FreeRTOS_RP5/FreeRTOS/Source/include/portable.h:
+/home/cockroach/FreeRTOS_RP5/FreeRTOS/Source/portable/GCC/RaspberryPi/portmacro.h:
+/home/cockroach/FreeRTOS_RP5/FreeRTOS/Source/include/mpu_wrappers.h:
+/home/cockroach/FreeRTOS_RP5/FreeRTOS/Source/include/task.h:
+/home/cockroach/FreeRTOS_RP5/FreeRTOS/Source/include/list.h:

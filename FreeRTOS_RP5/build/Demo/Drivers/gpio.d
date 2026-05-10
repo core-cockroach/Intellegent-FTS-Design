@@ -1,4 +1,4 @@
-/home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/build/Demo/Drivers/gpio.o: \
- /home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/Demo/Drivers/gpio.c \
- /home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/Demo/Drivers/gpio.h
-/home/cockroach/FreeRtosForRPpi/RaspberryPi-FreeRTOS/Demo/Drivers/gpio.h:
+/home/cockroach/FreeRTOS_RP5/build/Demo/Drivers/gpio.o: \
+ /home/cockroach/FreeRTOS_RP5/Demo/Drivers/gpio.c \
+ /home/cockroach/FreeRTOS_RP5/Demo/Drivers/gpio.h
+/home/cockroach/FreeRTOS_RP5/Demo/Drivers/gpio.h:

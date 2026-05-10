@@ -30,7 +30,8 @@ OBJECTS += $(BUILD_DIR)/FreeRTOS/Source/portable/MemMang/heap_4.o
 #
 OBJECTS += $(BUILD_DIR)Demo/startup.o
 
-
+# Add your new fault manager source file to the list of objects
+OBJECTS += $(BUILD_DIR)Demo/fault_manager.o
 #
 #	Main Test Program
 #

@@ -88,11 +88,14 @@
 #define configMINIMAL_STACK_SIZE	( ( unsigned short ) 128 )
 #define configTOTAL_HEAP_SIZE		( ( size_t ) ( 4096 ) )
 #define configMAX_TASK_NAME_LEN		( 16 )
-#define configUSE_TRACE_FACILITY	0
+#define configUSE_TRACE_FACILITY	1
 #define configUSE_16_BIT_TICKS		0
 #define configIDLE_SHOULD_YIELD		1
 #define configUSE_APPLICATION_TASK_TAG	1
 
+#define configUSE_QUEUES            1   // Enables queues (default 1)
+#define configSUPPORT_DYNAMIC_ALLOCATION 1 // For xTaskCreate (default 1)
+#define configUSE_PORT_OPTIMISED_TASK_SELECTION 0
 /* Co-routine definitions. */
 #define configUSE_CO_ROUTINES 		0
 #define configMAX_CO_ROUTINE_PRIORITIES ( 2 )

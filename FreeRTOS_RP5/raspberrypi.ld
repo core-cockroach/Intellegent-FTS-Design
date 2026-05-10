@@ -58,6 +58,12 @@ SECTIONS {
 		__bss_end = .;
 	} > RAM
 
+
+    end = .;
+    _end = .;
+    PROVIDE(end = .);
+    PROVIDE(_end = .);
+
 	/**
 	 *	Place HEAP here???
 	 **/
